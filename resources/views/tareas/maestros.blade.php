@@ -11,20 +11,18 @@
 
 <body>
     <div class="container w-25 border p-4 mt-3">
-        <form method="POST" action="{{route('tablaAlumnos') }}">
-        <h4>Iniciar Sesion</h4>
+        <form method="POST" action="{{route('maestros') }}">
+            <h4 style="color: blue;">Iniciar Sesion</h4>
             @csrf
-            @if (session('success'))
-            <h5 class="alert alert-success">{{session('success')}}</h5>
-
+            @if (session('info'))
+                <h5 class="alert alert-info">{{ session('info') }}</h5>
             @endif
-            @error('Contrasena')
-            <h5 class="alert alert-danger">{{$message}}</h5>
+            @error('info')
+                <h5 class="alert alert-danger">{{ $message }}</h5>
             @enderror
             <div class="mb-3">
                 <label class="form-label">Correo Institucional</label>
                 <input type="email" name="Correo" class="form-control">
-
             </div>
             <div class="mb-3">
                 <label class="form-label">Contraseña</label>

@@ -11,15 +11,15 @@
 
 <body>
     <div class="container w-25 border p-4 mt-3">
-        <h4>Registro</h4>
+        <h4 style="color:Red;">Registro</h4>
         <form method="POST" action="{{route('registro') }}">
             @csrf
             @if (session('success'))
             <h5 class="alert alert-success">{{session('success')}}</h5>
 
             @endif
-            @error('Contrasena')
-            <h5 class="alert alert-danger">{{$message}}</h5>
+            @error('Password') 
+                <h5 class="alert alert-danger">{{ $message }}</h5>
             @enderror
             <div class="mb-3">
                 <label class="form-label">Correo Institucional</label>

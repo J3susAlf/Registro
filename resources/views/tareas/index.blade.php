@@ -23,7 +23,7 @@
             <h5 class="alert alert-danger">{{$message}}</h5>
             @enderror
             <div class="mb-3">
-                <label class="form-label"><strong>Matricula</strong></label>
+                <label class="form-label"><h3 style="color: green;">Matricula</h3></label>
                 <input type="number" name="Matricula" class="form-control">
             </div>
             <button type="submit" name="Entrada" class="btn btn-primary">Entrada</button>
