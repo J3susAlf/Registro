@@ -9,6 +9,6 @@ class tablaController extends Controller
 {
     public function store(){
         $registros = crudregisters::all();
-        return redirect()->route('tablaAlumnos')->with('registros', $registros);
+        return view('tareas.tablaAlumnos', ['registros' => $registros]);
     }
 }

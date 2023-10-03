@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('crudregisters', function (Blueprint $table) {
             $table->id();
             $table->integer('Matricula');
-        $table->string('Entrada');
-        $table->string('Salida')->nullable();
+            $table->string('Entrada');
+            $table->string('Salida')->nullable();
             $table->timestamps();
         });
     }

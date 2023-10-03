@@ -32,5 +32,6 @@ Route::get('/home/tablaAlumnos', function () {
 Route::post('/home/alumnos', [CrudController::class, 'store'])->name('alumnos');
 Route::post('/home/maestros', [maestrosController::class, 'store'])->name('maestros');
 Route::post('/home/registro', [registerController::class, 'store'])->name('registro');
-Route::post('/home/tablaAlumnos', [maestrosController::class, 'store'])->name('tablaAlumnos'); 
+Route::get('/home/tablaAlumnos', [tablaController::class, 'store'])->name('tablaAlumnos'); 
+
 /* Route::post('/home/tablaAlumnos', [tablaController::class, 'store'])->name('tablaAlumnos'); */
